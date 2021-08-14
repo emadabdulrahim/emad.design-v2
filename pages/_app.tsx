@@ -1,7 +1,13 @@
 import type { AppProps } from "next/app"
+import { StaticResourcesHead } from "@/components"
 import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <StaticResourcesHead />
+      <Component {...pageProps} />
+    </>
+  )
 }
 export default MyApp
