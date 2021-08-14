@@ -6,5 +6,5 @@ export const Heading: React.FC<any> = ({
   as: Tag = "h2",
   children,
 }) => {
-  return <Tag className={`text-${size} font-bold${className}`}>{children}</Tag>
+  return <Tag className={`text-7 font-bold`}>{children}</Tag>
 }
