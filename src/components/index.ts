@@ -1,2 +1,5 @@
 export * from "./StaticResourcesHead"
 export * from "./Heading"
+export * from "./Text"
+export * from "./HStack"
+export * from "./VStack"

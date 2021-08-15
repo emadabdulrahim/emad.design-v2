@@ -1,14 +1,14 @@
 import * as React from "react"
 
 const SIZES = {
-  "1": "text-1 uppercase text-gray-g11",
-  "2": "text-2 text-gray-g11",
-  "3": "text-3 text-gray-g12",
-  "4": "text-4 text-gray-g12",
-  "5": "text-5 text-gray-g12",
-  "6": "text-6 text-gray-g12",
-  "7": "text-7 text-gray-g12",
-  "8": "text-8 text-gray-g12",
+  "1": "text-1 uppercase text-text-body",
+  "2": "text-2 text-text-heading dark:text-text-white",
+  "3": "text-3 text-text-heading dark:text-text-white",
+  "4": "text-4 text-text-heading dark:text-text-white",
+  "5": "text-5 text-text-heading dark:text-text-white",
+  "6": "text-6 text-text-heading dark:text-text-white",
+  "7": "text-7 text-text-heading dark:text-text-white",
+  "8": "text-8 text-text-heading dark:text-text-white",
 }
 
 type HeadingProps = {

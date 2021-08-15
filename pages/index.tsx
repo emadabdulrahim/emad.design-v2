@@ -1,19 +1,28 @@
 import * as React from "react"
 import type { NextPage } from "next"
-import { Heading } from "@/components"
+import { Heading, HStack, Text, VStack } from "@/components"
 
 const Home: NextPage = () => {
   return (
-    <main className='container mx-auto'>
-      <Heading size={1}>Hello World</Heading>
-      <Heading size={2}>Hello World</Heading>
-      <Heading size={3}>Hello World</Heading>
-      <Heading size={4}>Hello World</Heading>
-      <Heading size={5}>Hello World</Heading>
-      <Heading size={6}>Hello World</Heading>
-      <Heading size={7}>Hello World</Heading>
-      <Heading size={8}>Hello World</Heading>
-    </main>
+    <div className='dark'>
+      <main className='flex min-h-screen mx-auto dark bg-bg-tint1 dark:bg-bg-darkTint1'>
+        <VStack space='2rem' className='max-w-3xl px-4 py-20 mx-auto'>
+          <Heading size={8}>Hello, I’m Emad</Heading>
+          <Text size={3}>
+            I’m a Product Designer and Frontend Developer based in San
+            Francisco. I specialize in user experience design, visual design,
+            interaction design, and building products that are joyful to use.
+          </Text>
+          <Text size={3}>
+            Currently building{" "}
+            <a href='//duskk.com' className='text-blue-b8'>
+              Duskk
+            </a>{" "}
+            — A journal for ambitious individuals.
+          </Text>
+        </VStack>
+      </main>
+    </div>
   )
 }
 

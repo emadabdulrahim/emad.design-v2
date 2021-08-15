@@ -1,42 +1,61 @@
 const colors = require("@radix-ui/colors")
 
+const scales = {
+  blue: {
+    b1: colors.blue.blue1,
+    b2: colors.blue.blue2,
+    b3: colors.blue.blue3,
+    b4: colors.blue.blue4,
+    b5: colors.blue.blue5,
+    b6: colors.blue.blue6,
+    b7: colors.blue.blue7,
+    b8: colors.blue.blue8,
+    b9: colors.blue.blue9,
+    b10: colors.blue.blue10,
+    b11: colors.blue.blue11,
+    b12: colors.blue.blue12,
+  },
+  gray: {
+    g1: colors.slate.slate1,
+    g2: colors.slate.slate2,
+    g3: colors.slate.slate3,
+    g4: colors.slate.slate4,
+    g5: colors.slate.slate5,
+    g6: colors.slate.slate6,
+    g7: colors.slate.slate7,
+    g8: colors.slate.slate8,
+    g9: colors.slate.slate9,
+    g10: colors.slate.slate10,
+    g11: colors.slate.slate11,
+    g12: colors.slate.slate12,
+  },
+}
+
 module.exports = {
+  darkMode: "media",
   mode: "jit",
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
     colors: {
-      blue: {
-        b1: colors.blue.blue1,
-        b2: colors.blue.blue2,
-        b3: colors.blue.blue3,
-        b4: colors.blue.blue4,
-        b5: colors.blue.blue5,
-        b6: colors.blue.blue6,
-        b7: colors.blue.blue7,
-        b8: colors.blue.blue8,
-        b9: colors.blue.blue9,
-        b10: colors.blue.blue10,
-        b11: colors.blue.blue11,
-        b12: colors.blue.blue12,
+      ...scales,
+      text: {
+        heading: scales.gray.g12,
+        body: scales.gray.g11,
+        muted: scales.gray.g10,
+        light: scales.gray.g9,
+        white: scales.gray.g1,
+        darkBody: scales.gray.g7,
+        darkMuted: scales.gray.g9,
       },
-      gray: {
-        g1: colors.slate.slate1,
-        g2: colors.slate.slate2,
-        g3: colors.slate.slate3,
-        g4: colors.slate.slate4,
-        g5: colors.slate.slate5,
-        g6: colors.slate.slate6,
-        g7: colors.slate.slate7,
-        g8: colors.slate.slate8,
-        g9: colors.slate.slate9,
-        g10: colors.slate.slate10,
-        g11: colors.slate.slate11,
-        g12: colors.slate.slate12,
+      bg: {
+        tint1: scales.gray.g2,
+        tint2: scales.gray.g3,
+        darkTint1: scales.gray.g12,
+        darkTint2: scales.gray.g11,
       },
     },
     fontFamily: {
@@ -71,8 +90,8 @@ module.exports = {
       1: ["0.75rem", { lineHeight: "1.5", letterSpacing: "0.06em" }],
       2: ["0.875rem", { lineHeight: "1.5", letterSpacing: "0.01em" }],
       3: ["1rem", { lineHeight: "1.5", letterSpacing: "0.01em" }],
-      4: ["1.25rem", { lineHeight: "1.25", letterSpacing: "0.01em" }],
-      5: ["1.5rem", { lineHeight: "1.25", letterSpacing: "-0.01em" }],
+      4: ["1.25rem", { lineHeight: "1.5", letterSpacing: "0.01em" }],
+      5: ["1.5rem", { lineHeight: "1.4", letterSpacing: "-0.01em" }],
       6: ["1.875rem", { lineHeight: "1.2", letterSpacing: "-0.015em" }],
       7: ["2.25rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
       8: ["3.5rem", { lineHeight: "1", letterSpacing: "-0.03em" }],
@@ -80,6 +99,11 @@ module.exports = {
     fontWeight: {
       normal: "400",
       bold: "600",
+    },
+    letterSpacing: {
+      body: "-0.02em",
+      medium: "-0.025em",
+      heading: "-0.035em",
     },
   },
   variants: {
