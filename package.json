@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/colors": "^0.1.7",
     "@tryghost/content-api": "^1.5.12",
     "next": "11.1.0",
     "react": "17.0.2",
