@@ -32,7 +32,7 @@ const scales = {
 }
 
 module.exports = {
-  darkMode: "media",
+  darkMode: "class",
   mode: "jit",
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -94,7 +94,7 @@ module.exports = {
       5: ["1.5rem", { lineHeight: "1.4", letterSpacing: "-0.01em" }],
       6: ["1.875rem", { lineHeight: "1.2", letterSpacing: "-0.015em" }],
       7: ["2.25rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-      8: ["3.5rem", { lineHeight: "1", letterSpacing: "-0.03em" }],
+      8: ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.03em" }],
     },
     fontWeight: {
       normal: "400",

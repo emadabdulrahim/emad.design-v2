@@ -30,28 +30,28 @@ const Home: NextPage = ({ posts }) => {
 
 export default Home
 
-export async function getPosts() {
-  return await ghostApi.posts
-    .browse({
-      limit: "all",
-    })
-    .catch((err: any) => {
-      console.error(err)
-    })
-}
+// export async function getPosts() {
+//   return await ghostApi.posts
+//     .browse({
+//       limit: "all",
+//     })
+//     .catch((err: any) => {
+//       console.error(err)
+//     })
+// }
 
-export async function getStaticProps() {
-  const posts = (await getPosts()) || []
-  console.log("🚀 ~ file: index.tsx ~ line 45 ~ getStaticProps ~ posts", posts)
-  const parsed = posts.map((p: any) => htmlToMarkdown(p))
+// export async function getStaticProps() {
+//   const posts = (await getPosts()) || []
+//   console.log("🚀 ~ file: index.tsx ~ line 45 ~ getStaticProps ~ posts", posts)
+//   const parsed = posts.map((p: any) => htmlToMarkdown(p))
 
-  if (!posts) {
-    return {
-      notFound: true,
-    }
-  }
+//   if (!posts) {
+//     return {
+//       notFound: true,
+//     }
+//   }
 
-  return {
-    props: { posts: parsed },
-  }
-}
+//   return {
+//     props: { posts: parsed },
+//   }
+// }
