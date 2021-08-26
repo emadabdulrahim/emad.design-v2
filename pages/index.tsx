@@ -3,8 +3,7 @@ import type { NextPage } from "next"
 import { Heading, HStack, Text, VStack } from "@/components"
 import { htmlToMarkdown, ghostApi } from "@/lib"
 
-const Home: NextPage = ({ posts }) => {
-  console.log("🚀 ~ file: index.tsx ~ line 7 ~ posts", posts)
+const Home: NextPage = () => {
   return (
     <div className='dark'>
       <main className='flex min-h-screen mx-auto dark bg-bg-tint1 dark:bg-bg-darkTint1'>

@@ -1,6 +1,12 @@
 import * as React from "react"
 
-export const VStack = ({
+type VStackProps = {
+  space?: string
+  recursive?: boolean
+  className?: string
+}
+
+export const VStack: React.FC<VStackProps> = ({
   children,
   space = "8",
   recursive = false,
