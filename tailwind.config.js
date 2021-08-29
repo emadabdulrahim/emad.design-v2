@@ -32,7 +32,7 @@ const scales = {
 }
 
 module.exports = {
-  darkMode: "media",
+  darkMode: "class",
   mode: "jit",
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx}",

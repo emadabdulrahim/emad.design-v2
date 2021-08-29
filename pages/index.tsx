@@ -1,7 +1,9 @@
 import * as React from "react"
 import type { NextPage } from "next"
-import { Heading, HStack, Text, VStack } from "@/components"
-import { htmlToMarkdown, ghostApi } from "@/lib"
+import { Heading, HStack, Text, VStack } from "@/components/index"
+import { MarkdownRenderer } from "@/components/MarkdownRenderer"
+import { ghostApi } from "@/lib/index"
+import { htmlToMarkdown } from "@/lib/htmlToMarkdown"
 
 const Home: NextPage = ({ posts }) => {
   console.log("🚀 ~ file: index.tsx ~ line 7 ~ posts", posts)
@@ -22,6 +24,12 @@ const Home: NextPage = ({ posts }) => {
             </a>{" "}
             — A journal for ambitious individuals.
           </Text>
+
+          <div>
+            {posts.map((post) => (
+              <MarkdownRenderer>{post}</MarkdownRenderer>
+            ))}
+          </div>
         </VStack>
       </main>
     </div>
@@ -41,8 +49,7 @@ export async function getPosts() {
 }
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || []
-  console.log("🚀 ~ file: index.tsx ~ line 45 ~ getStaticProps ~ posts", posts)
+  const posts = await getPosts()
   const parsed = posts.map((p: any) => htmlToMarkdown(p))
 
   if (!posts) {

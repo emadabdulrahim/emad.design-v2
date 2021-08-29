@@ -2,6 +2,6 @@ import GhostContentAPI from "@tryghost/content-api"
 
 export const ghostApi = new GhostContentAPI({
   url: "https://words.ghost.io",
-  key: "51141193abdcf21598e55f7b5f",
+  key: process.env.NEXT_PUBLIC_GHOST_TOKEN as string,
   version: "v3",
 })
